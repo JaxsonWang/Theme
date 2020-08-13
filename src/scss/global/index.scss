@@ -1,0 +1,25 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #{var(--background-color)};
+  height: 100%;
+}
+
+.wrapper-site {
+}
+
+.wrapper-site {
+  border-radius: $wrapper-border-radius;
+}
+
+.wrapper-sidebar {
+  border-top-left-radius: $wrapper-border-radius;
+  border-bottom-left-radius: $wrapper-border-radius;
+}
+
+.wrapper-content {
+  border-top-right-radius: $wrapper-border-radius;
+  border-bottom-right-radius: $wrapper-border-radius;
+}

@@ -68,7 +68,6 @@ module.exports = {
     historyApiFallback: true,
     before(app) {
       app.use('/assets', express.static('./src/assets'))
-      app.use('/img', express.static('./src/assets/img'))
     }
   },
   plugins: getPlugins(),
