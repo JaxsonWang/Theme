@@ -3,9 +3,10 @@
  * 归作者所有，如有问题请联系作者。
  */
 
-import { getEle, hasClass } from '../../src/js/utils/dom'
+import { getEle, hasClass } from '@utils/dom'
 
 test('hasClass', () => {
-  const result = hasClass(getEle('.site-wrapper'), 'container')
-  expect(result).toBe(true)
+  document.body.innerHTML = `<div class="site-wrapper container d-flex"></div>`
+  expect(hasClass(getEle('.site-wrapper'), 'container')).toBe(true)
+  expect(hasClass(getEle('.site-wrapper'), 'app-wrapper')).toBe(false)
 })

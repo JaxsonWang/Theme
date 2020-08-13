@@ -9,7 +9,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 const htmlFileNames = fs.readdirSync('./src/html/')
 
-function resolve(dir) {
+const resolve = dir => {
   return path.join(__dirname, dir)
 }
 
@@ -64,7 +64,7 @@ module.exports = {
     rules: [
       {
         test: /\.(html)$/,
-        loader: path.resolve(__dirname, 'loader/html-loader.js'),
+        loader: resolve('./loader/html-loader.js'),
         options: {
           html: htmlFileNames
         }

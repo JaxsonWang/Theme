@@ -5,15 +5,6 @@
  */
 
 /**
- * 移除前后空格
- * @param string
- * @returns {string}
- */
-const trim = string => {
-  return (string || '').replace(/^[\s\uFEFF]+|[\s\uFEFF]+$/g, '')
-}
-
-/**
  * 检验某个节点是否存在某个类名
  * @param element 节点对象
  * @param clazz class 类名
@@ -75,7 +66,7 @@ export const removeClass = (element, clazz) => {
     }
   }
   if (!element.classList) {
-    element.className = trim(curClass)
+    element.className = curClass.trim()
   }
 }
 

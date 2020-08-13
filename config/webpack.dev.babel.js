@@ -9,6 +9,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const htmlFileNames = fs.readdirSync('./src/html/')
 
+const resolve = dir => {
+  return path.join(__dirname, dir)
+}
+
 const getEntries = () => {
   const entries = {
     'rebirth': [
@@ -52,7 +56,7 @@ const getPlugins = () => {
 module.exports = {
   entry: getEntries(),
   output: {
-    filename: '[name].js'
+    filename: '[name].[hash].js'
   },
   devServer: {
     contentBase: './src/html',
@@ -73,7 +77,7 @@ module.exports = {
     rules: [
       {
         test: /\.(html)$/,
-        loader: path.resolve(__dirname, 'loader/html-loader.js'),
+        loader: resolve('./loader/html-loader.js'),
         options: {
           html: htmlFileNames
         }
@@ -130,5 +134,8 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jpg', '.html', '.scss'],
+    alias: {
+      '@': resolve('../src')
+    }
   }
 }

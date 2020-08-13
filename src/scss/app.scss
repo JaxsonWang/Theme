@@ -1,13 +1,2 @@
-.wrapper-site {
-  .wrapper-sidebar {
-    .blog-info {
-      height: 500px;
-    }
-    .info-copyright {
-      height: 200px;
-    }
-  }
-  .wrapper-content {
-    height: 100vh;
-  }
-}
+@import "sidebar/wrapper";
+@import "sidebar/navbar";

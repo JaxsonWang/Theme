@@ -10,13 +10,13 @@
 <body>
   <div class="wrapper-site container d-flex">
     <div class="row">
-      <div class="wrapper-sidebar col-3">
-        <div class="blog-info border bg-light"></div>
-        <div class="info-copyright border bg-light mt-5"></div>
+      <include>_header.html</include>
+      <div class="wrapper-sidebar d-flex flex-column justify-content-center col-4 border bg-light">
+        <include>_sidebar-blog.html</include>
+        <include>_sidebar-navbar.html</include>
       </div>
-      <div class="col-9">
-        <div class="wrapper-content border bg-light">
-        </div>
+      <div class="wrapper-content col-8 border bg-light">
+        中心位置
       </div>
     </div>
   </div>
