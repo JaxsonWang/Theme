@@ -6,7 +6,77 @@
 .sidebar-navbar {
   .nav-item {
     a.nav-link {
-      color: #000;
+      font-size: 1rem;
+      color: #{var(--font-main-color)};
+
+      i[class*="fa"] {
+        text-align: center;
+        width: 2rem;
+        height: 2rem;
+        line-height: 2rem;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+      }
+
+      &:hover {
+        color: #{var(--main-theme-color)};
+      }
+    }
+
+    &:nth-child(1) {
+      i[class*="fa"] {
+        color: rgba(0, 204, 255, 1);
+        background-color: rgba(0, 204, 255, 0.25);
+      }
+    }
+
+    &:nth-child(2) {
+      i[class*="fa"] {
+        color: rgba(204, 0, 102, 1);
+        background-color: rgba(204, 0, 102, 0.25);
+      }
+    }
+
+    &:nth-child(3) {
+      i[class*="fa"] {
+        color: rgba(0, 204, 204, 1);
+        background-color: rgba(0, 204, 204, 0.25);
+      }
+    }
+
+    &:nth-child(4) {
+      i[class*="fa"] {
+        color: rgba(255, 102, 102, 1);
+        background-color: rgba(255, 102, 102, 0.25);
+      }
+    }
+
+    &:nth-child(5) {
+      i[class*="fa"] {
+        color: rgba(153, 153, 204, 1);
+        background-color: rgba(153, 153, 204, 0.25);
+      }
+    }
+
+    &:nth-child(6) {
+      i[class*="fa"] {
+        color: rgba(255, 153, 102, 1);
+        background-color: rgba(255, 153, 102, 0.25);
+      }
+    }
+
+    &:nth-child(7) {
+      i[class*="fa"] {
+        color: rgba(51,0, 51, 1);
+        background-color: rgba(51,0, 51, 0.25);
+      }
+    }
+
+    &:nth-child(8) {
+      i[class*="fa"] {
+        color: rgba(255, 153, 153, 1);
+        background-color: rgba(255, 153, 153, 0.25);
+      }
     }
   }
 }
