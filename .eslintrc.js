@@ -14,5 +14,7 @@ module.exports = {
 
   // add your custom rules here
   rules: {
+    'no-unused-vars': 'off',
+    'no-undef': 'off',
   }
 }
