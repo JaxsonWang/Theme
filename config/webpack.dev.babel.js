@@ -56,7 +56,7 @@ const getPlugins = () => {
 module.exports = {
   entry: getEntries(),
   output: {
-    filename: '[name].[hash].js'
+    filename: '[name].js'
   },
   devServer: {
     contentBase: './src/html',
