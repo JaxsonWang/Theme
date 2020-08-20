@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2020. Jaxson All Rights Reserved.
- * 归作者所有，如有问题请联系作者。
- */
-
 /**
  * 异步载入脚本
  * @param scripts 脚本数组对象

@@ -1,6 +1,6 @@
-import { getOptions } from 'loader-utils'
 import fs from 'fs'
 import path from 'path'
+import { getOptions } from 'loader-utils'
 
 const insertIncludes = function (self, content, regex) {
   const includes = content.match(regex)
@@ -23,7 +23,6 @@ const loader = function (source) {
   const options = getOptions(this)
   const regex = new RegExp(`(${options.html.join('|')})`, 'ig')
   const newSource = insertIncludes(this, source, regex)
-
   return `export default ${JSON.stringify(newSource)}`
 }
 

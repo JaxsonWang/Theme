@@ -1,9 +1,3 @@
-/*
- * Copyright (c) 2020. Jaxson All Rights Reserved.
- * 归作者所有，如有问题请联系作者。
- * 节点操作类
- */
-
 /**
  * 检验某个节点是否存在某个类名
  * @param element 节点对象

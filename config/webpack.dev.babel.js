@@ -44,7 +44,8 @@ const getPlugins = () => {
         new HtmlWebpackPlugin({
           template: `./src/html/${filename}`,
           filename: `./${filename}`,
-          chunks: ['rebirth']
+          chunks: ['rebirth'],
+          minify: false
         })
       )
     }

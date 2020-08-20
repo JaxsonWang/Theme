@@ -44,7 +44,8 @@ const getPlugins = () => {
         plugins.push(
           new HtmlWebpackPlugin({
             template: `./src/html/${filename}`,
-            filename: `./${filename}`
+            filename: `./${filename}`,
+            minify: false
           })
         )
       }
@@ -111,6 +112,9 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.jpg', '.html', '.scss']
+    extensions: ['.js', '.jpg', '.html', '.scss'],
+    alias: {
+      '@': resolve('../src')
+    }
   }
 }
