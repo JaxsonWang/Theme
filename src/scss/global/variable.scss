@@ -1,17 +1,20 @@
 // 背景色
-$background-color: "#eaf3fd"!default;
+$background-color: #e9eaee!default;
+
+// 区块颜色
+$wrapper-color: #fff!default;
 
 // 主题强调色
-$theme-main-color: "#6cacfd"!default;
+$theme-main-color: #6cacfd!default;
 
 // 字体颜色
-$font-main-color: "#181F25"!default;
+$font-main-color: #181F25!default;
 
 // 字体辅助色
-$font-assist-color: "#9EA0A3"!default;
+$font-assist-color: #9EA0A3!default;
 
 // 超链接字体色
-$link-color: "#797D81"!default;
+$link-color: #797D81!default;
 
 // 主显示区域
 $theme-main-height: 90vh!default;
@@ -21,6 +24,7 @@ $wrapper-border-radius: 1.5rem !default;
 
 :root {
   --background-color: #{$background-color};
+  --wrapper-color: #{$wrapper-color};
   --main-theme-color: #{$theme-main-color};
   --font-main-color: #{$font-main-color};
   --font-assist-color: #{$font-assist-color};
