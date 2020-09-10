@@ -9,20 +9,18 @@
   <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
 </head>
 <body>
-  <div class="wrapper-app h-100">
-    <div class="wrapper-main d-flex align-items-center h-100">
-      <div class="wrapper-site container">
-        <div class="row">
-          <div class="wrapper-sidebar d-flex flex-column col-3 border-right">
-            <include>_sidebar-blog.html</include>
-            <include>_sidebar-navbar.html</include>
-            <include>_sidebar-footer.html</include>
-          </div>
-          <div class="wrapper-content col-9">
-            <include>_header.html</include>
-            <include>_content.html</include>
-          </div>
+  <div class="wrapper-site container">
+    <div class="row">
+      <div class="wrapper-sidebar d-flex flex-column col-3 border-right">
+        <div class="sidebar-visible">
+          <include>_sidebar-blog.html</include>
+          <include>_sidebar-navbar.html</include>
+          <include>_sidebar-footer.html</include>
         </div>
+      </div>
+      <div class="wrapper-content col-9">
+        <include>_header.html</include>
+        <include>_content.html</include>
       </div>
     </div>
   </div>
