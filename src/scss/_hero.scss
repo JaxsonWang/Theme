@@ -1,0 +1,57 @@
+.ha__main-hero {
+  position: relative;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 6rem 0 4.5rem;
+  min-height: 22rem;
+  background-color: #000;
+  &-picture {
+    background-image: url('https://liebling.eduardogomez.io/content/images/size/w2000/2020/03/ivana-cajina-h3YqcK2_Ut8-unsplash-1.jpg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    opacity: .7;
+  }
+  &-content {
+    color: #fff;
+    z-index: 1;
+    .title {
+      font-size: 3.25rem;
+      margin-bottom: 1rem;
+    }
+    .description {
+      font-size: 1.375rem;
+      line-height: 1.5;
+      margin-bottom: 1.25rem;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+  .ha__main-hero {
+    min-height: 28rem;
+  }
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+  .ha__main-hero {
+    min-height: 35rem;
+  }
+}
+
+@media (min-width: 1400px) {
+
+}
