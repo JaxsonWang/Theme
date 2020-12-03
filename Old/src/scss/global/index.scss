@@ -1,0 +1,21 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #{var(--background-color)};
+  height: 100%;
+}
+
+a {
+  color: var(--font-main-color);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--font-main-color);
+  }
+}
+
+.wrapper-site {
+  height: 100%;
+}

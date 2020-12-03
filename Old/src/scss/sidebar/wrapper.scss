@@ -1,0 +1,11 @@
+.wrapper-sidebar {
+  grid-area: sidebar;
+  position: relative;
+  background-color: var(--wrapper-color);
+
+  .sidebar-visible {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+  }
+}

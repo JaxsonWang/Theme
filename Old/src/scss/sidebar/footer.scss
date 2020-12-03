@@ -1,0 +1,6 @@
+.sidebar-footer {
+  color: #{var(--font-assist-color)};
+  font-size: 0.8rem;
+  bottom: 1rem;
+  width: #{calc(100% - var(--bs-gutter-x))};
+}

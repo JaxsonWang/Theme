@@ -1,0 +1,30 @@
+.post-list {
+  .post-item {
+    .post-card {
+      padding-bottom: 5rem;
+      background-color: var(--wrapper-color);
+      .post-card-image {
+        height: 20rem;
+        img {
+          object-fit: cover;
+        }
+      }
+      .post-card-content {
+        .post-tag {
+        }
+      }
+      .post-card-meta {
+        left: 0;
+        bottom: 1rem;
+        .meta-avatar {
+          width: 2.8rem;
+          height: 2.8rem;
+          border: var(--link-color) 1px solid;
+        }
+        .meta-author {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
