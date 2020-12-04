@@ -1,0 +1,33 @@
+.ha__main-post-nav {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  .pagination {
+    .page-item {
+      .page-link {
+        border: none;
+        color: #000;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  .ha__main-post-nav {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+
+}
