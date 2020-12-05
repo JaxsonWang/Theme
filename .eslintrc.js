@@ -11,6 +11,7 @@ module.exports = {
   },
   extends: ['eslint:recommended'],
   rules: {
-    'no-undef': 'off'
+    'no-undef': 'off',
+    'no-unexpected-multiline': 'off'
   }
 }

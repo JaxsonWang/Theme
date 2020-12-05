@@ -29,6 +29,14 @@
       line-height: 1.5;
     }
   }
+
+  // 文章详细页
+  &.ha__main-hero-article {
+    background-color: transparent;
+    .ha__main-hero-picture {
+      opacity: 1;
+    }
+  }
 }
 
 @media (min-width: 576px) {

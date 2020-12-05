@@ -1,4 +1,15 @@
 .ha__header {
+  .blog-name {
+    font-size: 1.5rem;
+    padding-bottom: 0;
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        padding-bottom: 0;
+      }
+    }
+  }
   &-right {
     &-search {
       background-color: transparent;
