@@ -1,4 +1,4 @@
-import { loadScripts, loadStyles } from './utils'
+import { loadScripts, loadStyles } from '../utils'
 
 export default () => {
   // Prismjs 库地址

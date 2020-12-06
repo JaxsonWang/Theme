@@ -1,4 +1,4 @@
-import { loadScripts } from './utils'
+import { loadScripts } from '../utils'
 
 export default () => {
   if (document.querySelector('.ha__article-sidebar .toc') !== null) {

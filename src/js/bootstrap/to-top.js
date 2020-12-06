@@ -1,4 +1,4 @@
-import { getScrollTop } from './utils'
+import { getScrollTop } from '../utils'
 
 export default () => {
   // 判断当前滚动高度
@@ -9,11 +9,11 @@ export default () => {
   })
   // 点击按钮回到顶部
   if (document.querySelector('#to-top') === null) return
-  document.querySelector('#to-top').addEventListener('click', () => {
+  document.querySelector('#to-top').onclick = () => {
     document.body.scrollIntoView({
-      behavior: "smooth"
+      behavior: 'smooth'
     })
-  })
+  }
 }
 
 function setScrollTop() {

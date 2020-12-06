@@ -12,19 +12,19 @@
 <header class="ha__header">
   <nav class="navbar fixed-top navbar-expand-lg shadow-lg py-3 navbar-light bg-light">
     <div class="container">
-      <a class="blog-name navbar-brand" href="/youth">淮城一只猫</a>
+      <a class="blog-name navbar-brand" href="/">淮城一只猫</a>
       <button
         class="navbar-toggler"
         type="button"
         data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
+        data-target="#navbar-supported-content"
+        aria-controls="navbar-supported-content"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" id="navbar-supported-content">
         <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/youth">首页</a>
@@ -43,7 +43,7 @@
           </li>
         </ul>
         <div class="d-flex ha__header-right">
-          <button type="button" class="btn ha__header-right-search">
+          <button type="button" class="btn ha__header-right-search search-click-action">
             <i class="fas fa-search"></i>
           </button>
           <button type="button" class="btn ha__header-right-style">
@@ -375,16 +375,16 @@ console.log(arr5); // [ { test: [Function: test] }, 4, 3 ]</code></pre>
             </ul>
           </article>
         </div>
-        <div class="col-2 d-none d-xl-block">
+        <div class="col-12 col-xl-2">
           <div class="ha__article-sidebar">
-            <aside class="toc-container toc"></aside>
-            <div class="ha__article-share d-flex flex-column mt-3">
+            <aside class="toc-container toc d-none d-xl-block"></aside>
+            <div class="ha__article-share d-xl-flex flex-row flex-xl-column mt-3 text-center text-xl-left">
               <a
                 data-toggle="tooltip"
                 data-placement="right"
                 title="分享到微博"
                 href="#"
-                class="ha__article-share-item btn d-flex justify-content-center align-items-center mt-3"
+                class="ha__article-share-item btn d-inline-flex justify-content-center align-items-center mt-0 mt-xl-3 mx-2 mx-xl-0"
               >
                 <i class="fab fa-weibo share-icon"></i>
               </a>
@@ -393,7 +393,7 @@ console.log(arr5); // [ { test: [Function: test] }, 4, 3 ]</code></pre>
                 data-placement="right"
                 title="分享到QQ"
                 href="#"
-                class="ha__article-share-item btn d-flex justify-content-center align-items-center mt-3"
+                class="ha__article-share-item btn d-inline-flex justify-content-center align-items-center mt-0 mt-xl-3 mx-2 mx-xl-0"
               >
                 <i class="fab fa-qq share-icon"></i>
               </a>
@@ -402,7 +402,7 @@ console.log(arr5); // [ { test: [Function: test] }, 4, 3 ]</code></pre>
                 data-placement="right"
                 title="扫一扫分享到微信"
                 href="#"
-                class="ha__article-share-item btn d-flex justify-content-center align-items-center mt-3"
+                class="ha__article-share-item btn d-inline-flex justify-content-center align-items-center mt-0 mt-xl-3 mx-2 mx-xl-0"
               >
                 <i class="fab fa-weixin share-icon"></i>
               </a>
@@ -411,7 +411,7 @@ console.log(arr5); // [ { test: [Function: test] }, 4, 3 ]</code></pre>
                 data-placement="right"
                 title="分享到 Twitter"
                 href="#"
-                class="ha__article-share-item btn d-flex justify-content-center align-items-center mt-3"
+                class="ha__article-share-item btn d-inline-flex justify-content-center align-items-center mt-0 mt-xl-3 mx-2 mx-xl-0"
               >
                 <i class="fab fa-twitter share-icon"></i>
               </a>
@@ -561,9 +561,55 @@ console.log(arr5); // [ { test: [Function: test] }, 4, 3 ]</code></pre>
     <span>Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></span>
   </div>
 </footer>
+<div class="ha__search position-fixed">
+  <button type="button" class="btn-close" aria-label="close"></button>
+  <div class="input-group mb-3 search-area">
+    <span class="input-group-text" id="search"><i class="fas fa-search"></i></span>
+    <input type="text" class="form-control" placeholder="请输入搜索关键词..." aria-label="search" aria-describedby="search">
+  </div>
+  <div class="search-tags">
+    <a
+      href="#"
+      class="tag-item"
+      data-toggle="tooltip"
+      data-placement="bottom"
+      title="查看关于 标签1 标签的文章"
+    >
+      标签1
+    </a>
+    <a
+      href="#"
+      class="tag-item"
+      data-toggle="tooltip"
+      data-placement="bottom"
+      title="查看关于 标签2 标签的文章"
+    >
+      标签2
+    </a>
+    <a
+      href="#"
+      class="tag-item"
+      data-toggle="tooltip"
+      data-placement="bottom"
+      title="查看关于 标签3 标签的文章"
+    >
+      标签3
+    </a>
+    <a
+      href="#"
+      class="tag-item"
+      data-toggle="tooltip"
+      data-placement="bottom"
+      title="查看关于 标签4 标签的文章"
+    >
+      标签4
+    </a>
+  </div>
+</div>
 <!-- Separate Popper and Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
 <script src="index.js"></script>
 </body>
 </html>

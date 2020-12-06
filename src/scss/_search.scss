@@ -1,0 +1,54 @@
+.ha__search {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #fff;
+
+  .btn-close {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    font-size: 1.5rem;
+  }
+
+  .search-area {
+    max-width: 30rem;
+    margin: 10rem auto 2rem;
+
+    .input-group-text {
+      background-color: transparent;
+      border: none;
+      border-bottom: 4px #0470ee solid;
+
+      i.fa-search {
+        font-size: 1.2rem;
+      }
+    }
+    .form-control {
+      border: none;
+      font-size: 1.5rem;
+      border-bottom: 4px #0470ee solid;
+      &:focus {
+        border: none;
+        border-bottom: 4px #0470ee solid;
+        box-shadow: none
+      }
+    }
+  }
+
+  .search-tags {
+    max-width: 30rem;
+    margin: 1rem auto 2rem;
+    .tag-item {
+      color: #000;
+      margin: 0.25rem;
+      &:before {
+        color: #9ed0ff;
+        content: "#";
+        margin-right: 0.25rem;
+      }
+    }
+  }
+}
