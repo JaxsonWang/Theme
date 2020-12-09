@@ -36,6 +36,16 @@ export default () => {
     progress()
     toc()
 
+    // 加载页面搜索界面打开的问题
+    const searchDom = document.querySelector('.ha__search')
+    if (searchDom !== null && !searchDom.classList.contains('d-none')) searchDom.classList.add('d-none')
+    // 删除已存在的 tooltips 元素
+    const tooltipsList = [].slice.call(document.querySelectorAll('.tooltip.show'))
+    if (tooltipsList.length !== 0) tooltipsList.forEach(block => block.remove())
+    // 修复移动端打开页面菜单打开的问题
+    const mobileDom = document.querySelector('.navbar-toggler')
+    if (!mobileDom.classList.contains('collapsed')) mobileDom.click()
+
     // 移除 loading 动画
     setTimeout(() => {
       document.querySelector('.ha__loading').classList.remove('fade-in')
