@@ -8,7 +8,7 @@ export default () => {
         path: 'https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js'
       }
     ]).then(() => {
-      tocbot.init({
+      window.tocbot.init({
         tocSelector: '.ha__article-sidebar .toc',
         contentSelector: '.ha__main-article-content',
         hasInnerContainers: true,

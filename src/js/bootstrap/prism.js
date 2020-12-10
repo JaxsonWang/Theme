@@ -1,5 +1,7 @@
 import { loadScripts, loadStyles } from '../utils'
 
+let isRegister = false
+
 export default () => {
   // Prismjs 库地址
   const prismSrc = `https://cdn.jsdelivr.net/npm/prismjs@1.22.0`
@@ -52,36 +54,42 @@ export default () => {
         path: `${prismSrc}/plugins/line-numbers/prism-line-numbers.min.js`
       }
     ]).then(() => {
-      // 自动化高亮库
-      Prism.plugins.autoloader.languages_path = `${prismSrc}/components/`
-      // 注册按钮 - 显示语言
-      Prism.plugins.toolbar.registerButton('show-language', env => {
-        const button = document.createElement('div')
-        button.className = 'show-language'
-        button.innerHTML = `<i class="fas fa-code"></i> ${env.language}`
-        return button
-      })
-
-      // 注册按钮 - 复制代码
-      Prism.plugins.toolbar.registerButton('select-code', env => {
-        const button = document.createElement('button')
-        button.className = 'select-code'
-        button.innerHTML = `<i class="fas fa-copy"></i> 复制代码`
-        button.addEventListener('click', () => {
-          if (document.body.createTextRange) {
-            const range = document.body.createTextRange()
-            range.moveToElementText(env.element)
-            range.select()
-          } else if (window.getSelection) {
-            const selection = window.getSelection()
-            const range = document.createRange()
-            range.selectNodeContents(env.element)
-            selection.removeAllRanges()
-            selection.addRange(range)
-          }
+      const Prism = Prism || window.Prism
+      // Pjax 加载判断
+      if (!isRegister) {
+        // 自动化高亮库
+        Prism.plugins.autoloader.languages_path = `${prismSrc}/components/`
+        // 注册按钮 - 显示语言
+        Prism.plugins.toolbar.registerButton('show-language', env => {
+          const button = document.createElement('div')
+          button.className = 'show-language'
+          button.innerHTML = `<i class="fas fa-code"></i> ${env.language}`
+          return button
         })
-        return button
-      })
+        // 注册按钮 - 复制代码
+        Prism.plugins.toolbar.registerButton('select-code', env => {
+          const button = document.createElement('button')
+          button.className = 'select-code'
+          button.innerHTML = `<i class="fas fa-copy"></i> 复制代码`
+          button.addEventListener('click', () => {
+            if (document.body.createTextRange) {
+              const range = document.body.createTextRange()
+              range.moveToElementText(env.element)
+              range.select()
+            } else if (window.getSelection) {
+              const selection = window.getSelection()
+              const range = document.createRange()
+              range.selectNodeContents(env.element)
+              selection.removeAllRanges()
+              selection.addRange(range)
+            }
+          })
+          return button
+        })
+        // 已注册按钮
+        isRegister = true
+      }
+
       // 遍历 Dom
       codeBlocks.forEach(block => {
         if (block.classList.contains('language-html')) {
@@ -89,7 +97,8 @@ export default () => {
           block.classList.add('language-markup')
         }
         // 初始化高亮
-        Prism.highlightAll()
+        // Prism.highlightAll()
+        Prism.highlightElement(block)
 
         // 移除 loading 罩层
         setTimeout(() => {

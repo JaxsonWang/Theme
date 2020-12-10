@@ -23,7 +23,7 @@ export default () => {
     document.body.classList.add('overflow-hidden')
     // 添加 loading
     const loadingEle = document.createElement('div')
-    loadingEle.classList = 'ha__loading position-absolute d-flex flex-column justify-content-center align-items-center animated fade-in'
+    loadingEle.classList = 'ha__loading position-fixed d-flex flex-column justify-content-center align-items-center animated fade-in'
     loadingEle.innerHTML = `<img src="${loading()}" class="loading-image" alt="loading image"><div class="loading-text">正在加载数据中...</div>`
     document.body.appendChild(loadingEle)
   })
@@ -46,6 +46,10 @@ export default () => {
     const mobileDom = document.querySelector('.navbar-toggler')
     if (!mobileDom.classList.contains('collapsed')) mobileDom.click()
 
+    // // support 百度统计 / google analytics
+    if (typeof _hmt !== 'undefined') _hmt.push(['_trackPageview', location.pathname + location.search])
+    if (typeof ga !== 'undefined') ga('send', 'pageview', location.pathname + location.search)
+
     // 移除 loading 动画
     setTimeout(() => {
       document.querySelector('.ha__loading').classList.remove('fade-in')
@@ -53,9 +57,7 @@ export default () => {
       // 解锁滚动
       document.body.classList.remove('overflow-hidden')
     }, 1000)
-    setTimeout(() => {
-      document.querySelector('.ha__loading').remove()
-    }, 1600)
+    setTimeout(() => document.querySelector('.ha__loading').remove(), 1600)
   })
 
   // 在Pjax请求成功后触发
