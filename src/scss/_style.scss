@@ -1,7 +1,28 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-text-primary: #24292e;
+    --background-color: #fff;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text-primary: #fff;
+    --background-color: #000;
+  }
+}
+
+
 html {
-  -webkit-font-smoothing: subpixel-antialiased
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 a {
   text-decoration: none;
+}
+
+body {
+  color: #{var(--color-text-primary)};
+  background-color: #{var(--background-color)};
 }
