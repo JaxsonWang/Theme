@@ -10,7 +10,7 @@ export default () => {
     document.querySelector('.ha__search').classList.add('animated', 'fade-in')
   }
   // 关闭搜索界面
-  document.querySelector('.ha__search .btn-close').onclick = () => {
+  document.querySelector('.ha__search .search-close').onclick = () => {
     document.querySelector('.ha__search').classList.add('fade-out')
     document.querySelector('.ha__search').classList.remove('fade-in')
     // 延迟 500ms 关闭隐藏，动画执行

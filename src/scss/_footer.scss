@@ -1,12 +1,12 @@
 .ha__footer {
   width: 100%;
   padding: 5rem 0;
-  background-color: #133467;
+  background-color: #{var(--footer-background-color)};
 
   &-nav {
     .nav-item {
       .nav-link {
-        color: #fff;
+        color: #{var(--footer-text-color)};
       }
     }
   }
@@ -15,13 +15,13 @@
     .nav-item {
       .nav-link {
         font-size: 1.2rem;
-        color: #fff;
+        color: #{var(--footer-text-color)};
       }
     }
   }
 
   &-copyright {
-    color: #fff;
+    color: #{var(--footer-text-color)};
     font-size: 0.8rem;
     line-height: 3;
     a {

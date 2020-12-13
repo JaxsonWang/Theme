@@ -4,13 +4,19 @@
   top: 0;
   left: 0;
   z-index: 1040;
-  background-color: #fff;
+  background-color: #{var(--background-color)};
 
-  .btn-close {
+  .search-close {
     position: absolute;
     top: 3rem;
     right: 3rem;
     font-size: 1.5rem;
+    color: #{var(--color-text-primary)};
+    background-color: transparent;
+    border: none;
+    &:focus {
+      outline: none;
+    }
   }
 
   .search-area {
@@ -18,6 +24,7 @@
     margin: 10rem auto 2rem;
 
     .input-group-text {
+      color: #{var(--color-text-primary)};
       background-color: transparent;
       border: none;
       border-bottom: 4px #0470ee solid;
@@ -29,7 +36,9 @@
     .form-control {
       border: none;
       font-size: 1.5rem;
+      color: #{var(--color-text-primary)};
       border-bottom: 4px #0470ee solid;
+      background-color: transparent;
       &:focus {
         border: none;
         border-bottom: 4px #0470ee solid;
@@ -42,7 +51,7 @@
     max-width: 30rem;
     margin: 1rem auto 2rem;
     .tag-item {
-      color: #000;
+      color: #{var(--color-text-primary)};
       margin: 0.25rem;
       &:before {
         color: #9ed0ff;

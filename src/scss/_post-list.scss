@@ -4,6 +4,7 @@
     top: var(--bs-gutter-y);
   }
   .ha__main-post-item {
+    background-color: #{var(--background-color-assist-1)};
     height: 100%;
     transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1) 0ms;
     &:hover {
@@ -13,8 +14,6 @@
     .card-post-meta-author {
       width: 2.5rem;
       height: 2.5rem;
-      background-color: #fff;
-      border: 0.1rem solid #fff;
       border-radius: 50%;
     }
     .card-body {
@@ -47,7 +46,7 @@
         position: relative;
         top: 1rem;
         .tag-name {
-          color: #fff;
+          color: #{var(--constant-color-text-primary)};
           &:before {
             content: "#";
             margin-right: 0.25rem;
@@ -61,7 +60,7 @@
       height: 100%;
       top: 0;
       left: 0;
-      color: #fff;
+      color: #{var(--constant-color-text-primary)};
       padding: 1.5rem;
       .card-title {
         font-size: 2.25em;

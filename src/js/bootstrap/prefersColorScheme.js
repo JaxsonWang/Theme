@@ -1,36 +1,31 @@
-const defaultTheme = {
-  colorTextPrimary: '#24292e',
-  backgroundColor: '#fff'
+const themeMap = {
+  dark: 'dark',
+  light: 'light'
 }
 
-const darkTheme = {
-  colorTextPrimary: '#fff',
-  backgroundColor: '#000'
+const toggleLight = () => {
+  document.body.classList.add(themeMap.light)
+  document.body.classList.remove(themeMap.dark)
 }
 
-const darkSwitch = () => {
-  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.documentElement.style.setProperty('--color-text-primary', darkTheme.colorTextPrimary)
-    document.documentElement.style.setProperty('--background-color', darkTheme.backgroundColor)
-    console.log('🎉 Dark mode is supported', getComputedStyle(document.documentElement).getPropertyValue('--color-text-primary'))
-  } else {
-    document.documentElement.style.setProperty('--color-text-primary', defaultTheme.colorTextPrimary)
-    document.documentElement.style.setProperty('--background-color', defaultTheme.backgroundColor)
-    console.log('🎉 Light mode is supported', getComputedStyle(document.documentElement).getPropertyValue('--color-text-primary'))
-  }
+const toggleDark = () => {
+  document.body.classList.add(themeMap.dark)
+  document.body.classList.remove(themeMap.light)
 }
+
+const darkSwitch = () => window.matchMedia('(prefers-color-scheme: dark)').matches ? toggleDark() : toggleLight()
 
 export default () => {
   // 初始化
-  darkSwitch()
+  // darkSwitch()
   // 监听系统风格切换
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
     if (event.matches) {
-      console.log('🎉 Dark mode is supported', getComputedStyle(document.documentElement).getPropertyValue('--color-text-primary'))
+      console.log('🎉 Dark mode is supported')
       //dark mode
     } else {
       //light mode
-      console.log('🎉 Light mode is supported', getComputedStyle(document.documentElement).getPropertyValue('--color-text-primary'))
+      console.log('🎉 Light mode is supported')
     }
   })
   // 设置主题
@@ -38,14 +33,10 @@ export default () => {
   let style = window.matchMedia('(prefers-color-scheme: dark)').matches
   darkToggleDom.onclick = () => {
     if (!style) {
-      document.documentElement.style.setProperty('--color-text-primary', darkTheme.colorTextPrimary)
-      document.documentElement.style.setProperty('--background-color', darkTheme.backgroundColor)
+      toggleDark()
       style = true
-      console.log('🎉 Dark mode is supported', getComputedStyle(document.documentElement).getPropertyValue('--color-text-primary'))
     } else {
-      document.documentElement.style.setProperty('--color-text-primary', defaultTheme.colorTextPrimary)
-      document.documentElement.style.setProperty('--background-color', defaultTheme.backgroundColor)
-      console.log('🎉 Light mode is supported', getComputedStyle(document.documentElement).getPropertyValue('--color-text-primary'))
+      toggleLight()
       style = false
     }
   }
