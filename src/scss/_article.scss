@@ -158,9 +158,8 @@
       }
       blockquote {
         background-color: #e2f0ff;
-        border-left: 0.25rem dotted #e5e8e8;
+        border-left: 0.25rem dotted #9ed0ff;
         padding: 1rem 0.8rem;
-        color: #444;
         font-size: .9em;
       }
       blockquote blockquote {
@@ -210,10 +209,6 @@
       strong {
         font-weight: 500;
       }
-      pre > code {
-        margin: 0;
-        padding: 0;
-      }
       .pre-block-loading {
         position: absolute;
         top: 0;
@@ -228,16 +223,16 @@
           color: #{var(--color-text-primary)};
         }
       }
-      .show-language,
-      .select-code {
-        color: #bbb;
-        font-size: 0.8em;
-        padding: 0 0.5em;
-        background: #f5f2f0;
-        background: rgba(224,224,224,.2);
-        box-shadow: 0 0.125rem 0 0 rgba(0,0,0,.2);
-        border-radius: 0.5em;
-        margin: 0 0.25rem;
+    }
+  }
+}
+
+.dark .ha__main-article {
+  .ha__main-article-main {
+    .ha__main-article-content {
+      blockquote {
+        background-color: #3a3c3d;
+        border-left: 0.25rem dotted #000;
       }
     }
   }

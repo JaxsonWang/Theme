@@ -23,10 +23,6 @@ export default () => {
     // 加载样式资源
     loadStyles([
       {
-        name: 'prism-css',
-        path: `${prismSrc}/themes/prism.min.css`
-      },
-      {
         name: 'prism-line-numbers-css',
         path: `${prismSrc}/plugins/line-numbers/prism-line-numbers.min.css`
       },

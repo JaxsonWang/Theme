@@ -17,7 +17,7 @@ const darkSwitch = () => window.matchMedia('(prefers-color-scheme: dark)').match
 
 export default () => {
   // 初始化
-  // darkSwitch()
+  darkSwitch()
   // 监听系统风格切换
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
     if (event.matches) {
